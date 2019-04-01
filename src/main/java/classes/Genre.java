@@ -1,0 +1,16 @@
+package classes;
+
+public enum Genre {
+	COMEDIA,
+	SUSPENSE,
+	FICCAO,
+	ACAO,
+	ANIMACAO,
+	AVENTURA,
+	CULT,
+	DOCUMENTARIO,
+	TRASH,
+	ROMANCE,
+	FANTASIA,
+	DRAMA;
+}
