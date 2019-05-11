@@ -85,14 +85,14 @@ public class View implements Observer {
 					
 				} else if (update.message().text().equals("/movie")) {
 					setControllerSearch(new ControllerMovie(model, this));
-					sendResponse = bot.execute(new SendMessage(update.message().chat().id(),"Digite o ID do filme que deseja."));
+					sendResponse = bot
+							.execute(new SendMessage(update.message().chat().id(),"Digite o ID do filme que deseja."));
 					this.searchBehaviour = true;
 					
 				} else if (update.message().text().equals("/genres")) {
 					setControllerSearch(new ControllerMovie(model, this));
 					
 					for (String genre: genres) {
-						System.out.println(genre);
 						sendResponse = bot
 								.execute(new SendMessage(update.message().chat().id(), genre));
 					}	
@@ -102,7 +102,8 @@ public class View implements Observer {
 				
 				} else if (update.message().text().equals("/help")) {
 					setControllerSearch(new ControllerMovie(model, this));
-					sendResponse = bot.execute(new SendMessage(update.message().chat().id(),
+					sendResponse = bot
+							.execute(new SendMessage(update.message().chat().id(),
 							"Comandos: " + "\n" +
 								"/start - Inicia o bot" + "\n" +
 								"/genres - Informa todos os gêneros disponíveis" + "\n" +
@@ -129,11 +130,13 @@ public class View implements Observer {
 	}
 	
 	public void update(long chatId, String movieDatas){
-		sendResponse = bot.execute(new SendMessage(chatId, movieDatas));
+		sendResponse = bot
+				.execute(new SendMessage(chatId, movieDatas));
 		this.searchBehaviour = false;
 	}
 	
 	public void sendTypingMessage(Update update){
-		baseResponse = bot.execute(new SendChatAction(update.message().chat().id(), ChatAction.typing.name()));
+		baseResponse = bot
+				.execute(new SendChatAction(update.message().chat().id(), ChatAction.typing.name()));
 	}
 }

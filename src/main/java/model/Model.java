@@ -12,6 +12,7 @@ import utils.Subject;
 import utils.Observer;
 
 import com.pengrad.telegrambot.model.Update;
+import service.Connection;
 
 public class Model implements Subject {
 	

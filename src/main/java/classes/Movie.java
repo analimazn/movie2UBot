@@ -4,10 +4,10 @@ public class Movie {
 	private String id;
 	private String name;	
 	private String director;
-	private Genre genre;
+	private String genre;
 	private String year;
 		
-	public Movie(String id, String name, String director, Genre genre, String year){
+	public Movie(String id, String name, String director, String genre, String year){
 		this.id = id;
 		this.name = name;
 		this.director = director;
@@ -31,11 +31,11 @@ public class Movie {
 		this.director = director;
 	}
 
-	public Genre getGenre() {
+	public String getGenre() {
 		return genre;
 	}
 
-	public void setGenre(Genre genre) {
+	public void setGenre(String genre) {
 		this.genre = genre;
 	}
 
@@ -55,7 +55,7 @@ public class Movie {
 		this.year = year;
 	}
 
-	public boolean compare(Genre genre, String director, String year){
+	public boolean compare(String genre, String director, String year){
 		if(genre.equals(this.genre) && director.equals(this.director) && year.equals(this.year)){
 			return true;
 		} else {
