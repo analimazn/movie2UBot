@@ -1,5 +1,5 @@
 # movie2UBot
-A telegram bot to indicate movies.
+A telegram bot to suggest movies.
 
 ![UML_movie2U](https://user-images.githubusercontent.com/25674507/55369806-784fc280-54ce-11e9-98c3-f872a964541e.png)
 
