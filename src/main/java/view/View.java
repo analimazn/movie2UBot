@@ -23,7 +23,7 @@ import model.Model;
 public class View implements Observer {
 
 	
-	TelegramBot bot = TelegramBotAdapter.build("863572721:AAFBeRUCI50S6uDtfGfK36EIntTquHJg0_E");
+	TelegramBot bot = TelegramBotAdapter.build("TELEGRAM_KEY");
 	
 	//Object that receives messages
 	GetUpdatesResponse updatesResponse;
